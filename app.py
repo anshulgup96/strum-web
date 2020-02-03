@@ -11,10 +11,11 @@ users = {
 
 @app.route("/", methods=["GET", "POST"])
 def homepage():
-    """View function for Home Page."""
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
+        if email not in users:
+            return render_template("index.html", message="Incorrect email or password")
         if users[email] == password:
             return render_template("index.html", message ="Successfully Logged In")
         return render_template("index.html", message="Incorrect email or password")

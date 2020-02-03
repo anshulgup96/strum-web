@@ -1,0 +1,26 @@
+body {
+    background-image: url(white-walls-1764702.jpg);
+}
+
+.navbar-custom {
+    color: black;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+.jumbotron{
+    background-color: transparent;
+    width: 350px;
+    color: rgba(255,255,255,.8);
+    border-color: rgba(255,255,255,.8);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 15px;
+}

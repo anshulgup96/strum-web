@@ -1,6 +1,9 @@
 """Flask Application for Paws Rescue Center."""
 from flask import Flask, render_template
 from flask import request
+from pusher import Pusher
+import json
+
 app = Flask(__name__)
 
 users = {
@@ -44,6 +47,32 @@ def about():
 @app.route("/page")
 def page():
     return render_template('page.html')
+
+#For adding a todo list
+@app.route('/add-todo', methods = ['POST'])
+def addTodo():
+    data = json.loads(request.data)
+    pusher.trigger('todo', 'item-added', data)
+    return jsonify(data)
+
+    
+#For deleting a task
+@app.route('/remove-todo/<item_id>', methods = ['POST'])
+def updateTodo(item_id):
+    data = {'id': item_id }
+    pusher.trigger('todo', 'item-removed', data)
+    return jsonify(data)
+
+# endpoint for updating todo item
+@app.route('/update-todo/<item_id>', methods = ['POST'])
+def updateTodo(item_id):
+  data = {
+    'id': item_id,
+    'completed': json.loads(request.data).get('completed', 0)
+  }
+  pusher.trigger('todo', 'item-updated', data)
+  return jsonify(data)
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=3000)

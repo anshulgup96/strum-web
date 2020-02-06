@@ -1,12 +1,39 @@
+body{
+    padding-top: 8px;
+}
+
 h1 {
     text-align:center;
 }
 .left{
+    float: left;
+}
+
+#new-task-input{
+    display: none;
+}
+
+#new-task-input{
+    top: 40%;
+    right: 40%;
+    position: absolute;
+    border: 5px solid black;
+    padding: 10px;
+    background-color: blueviolet;
+    z-index: 1;
+}
+
+#task-section{
+    height: 500px;
+    width: 50%;
+    border: 0.5px solid grey;
+    float: left; 
+}
+
+.date{
     float: right;
 }
 
-#box{
-    height: 100px;
-    width: 100px;
-    background-color: blue;
+#content{
+    padding-top: 7px;
 }

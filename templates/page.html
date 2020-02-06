@@ -3,52 +3,63 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='page-style.css')}}">
+        <link rel="stylesheet" type="text/css" href="../static/page-style.css">
+        
     </head>
     
     <body>
         
-        <div class='container'>
-        
-            <h1 class='center'>STRUM TASK MANAGER</h1>
-            
-            
-            
-            <hr>
-            <div class='left'> 
-                <ul class="list-group w-25 p-3, left">
-                    <li class="list-group-item list-group-item-action">
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Find a task" aria-label="Search">
-                        </form>
-                    </li>
+        <h1 class='center'>STRUM TASK MANAGER</h1>
 
-                    <li class="list-group-item list-group-item-action">My day</li>
-                    <li class="list-group-item list-group-item-action">My projects</li>
-                    <li class="list-group-item list-group-item-action">My tasks</li>
-                    <li class="list-group-item list-group-item-action">Add new <button type="button">+</button></li>
+        <div id='content'>
+            <ul class="list-group w-50 p-3, left">
+                <li class="list-group-item list-group-item-action">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search for a task" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
 
-                </ul>
-            </div>
-            
-                <ul>
+                <li class="list-group-item list-group-item-action">My day</li>
+                <li class="list-group-item list-group-item-action">My projects</li>
+                <li class="list-group-item list-group-item-action" id='my-tasks'>My tasks</li>
+                <li class="list-group-item list-group-item-action">
+                    <span class='left'>Add new</span> 
+                    <div class="dropdown left" id='add-new-button'>
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        +
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                </li>
 
-                    <li>
-                        <input type="checkbox">
-                    </li>
-
-                </ul>
-            
-            </div>
-        
-        
-        
-        
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+            </ul>
         </div>
+        <div>
+            <form id='new-task-input'>
+              Enter the name of the task:<br>
+              <input type="text" name="task-name"><br>
+              Enter the deadline:<br>
+              <input type="date" name="deadline">
+              <br>
+              <input type="submit" value="submit">
+            </form>
+        </div>
+
+        <div id='task-section'>
+            
+        </div>
+
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="../static/page-js.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     </body>
 
 

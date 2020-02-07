@@ -1,27 +1,76 @@
-body {
-    background-image: url(grayscale-photo-of-man-wearing-tank-top-staring-at-window-932481.jpg);
-    background-size: cover;
+#my-jumbotron{
+    padding-top: 20px;
+    width: 400px;
+    
 }
 
-.navbar-custom {
+#strum-nav{
+    font-size: 300%;
     color: black;
 }
 
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
+#man{
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 20%;
+    display: none;
+    
 }
 
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
+body{
+    background-color: mintcream;
 }
 
-.jumbotron{
-    background-color: transparent;
-    width: 350px;
-    color: rgba(255,255,255,.8);
-    border-color: rgba(255,255,255,.8);
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 15px;
+.login-container{
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 0%;
+}
+.login-form-1{
+    padding: 9%;
+    background: black;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background-color: dodgerblue;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
 }

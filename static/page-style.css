@@ -1,5 +1,7 @@
 body{
     padding-top: 8px;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 h1 {
@@ -13,14 +15,15 @@ h1 {
     display: none;
 }
 
-#new-task-input{
-    top: 40%;
-    right: 40%;
+.pop-up{
+    top: 30%;
+    right: 70%;
     position: absolute;
-    border: 5px solid black;
+    border: 2px solid black;
     padding: 10px;
-    background-color: blueviolet;
     z-index: 1;
+    background-color: aliceblue;
+    display: none;
 }
 
 #task-section{
@@ -36,4 +39,22 @@ h1 {
 
 #content{
     padding-top: 7px;
+}
+
+.hide{
+    display: none;
+}
+
+.list-group-item{
+    background-color: mintcream;
+}
+
+.right{
+    float: right;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
 }

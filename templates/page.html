@@ -1,16 +1,20 @@
 <html>
 
     <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../static/page-style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         
     </head>
     
     <body>
         
-        <h1 class='center'>STRUM TASK MANAGER</h1>
-
+        <h1 class='center display-4'>STRUM Dashboard</h1>
+        
         <div id='content'>
             <ul class="list-group w-50 p-3, left">
                 <li class="list-group-item list-group-item-action">
@@ -20,36 +24,47 @@
                     </form>
                 </li>
 
-                <li class="list-group-item list-group-item-action">My day</li>
-                <li class="list-group-item list-group-item-action">My projects</li>
-                <li class="list-group-item list-group-item-action" id='my-tasks'>My tasks</li>
+                <li class="list-group-item list-group-item-action task-option" id='my-day'>My day</li>
+                <li class="list-group-item list-group-item-action task-option" id='my-projects'>My projects</li>
+                <li class="list-group-item list-group-item-action task-option" id='my-tasks'>My tasks</li>
                 <li class="list-group-item list-group-item-action">
-                    <span class='left'>Add new</span> 
                     <div class="dropdown left" id='add-new-button'>
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        +
+                        Add New
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" id='new-task-button' href="#">Add a new task</a>
+                        <a class="dropdown-item" id='new-team-button' href="#">Create a new team</a>
                       </div>
                     </div>
                 </li>
 
             </ul>
         </div>
-        <div>
-            <form id='new-task-input'>
-              Enter the name of the task:<br>
-              <input type="text" name="task-name"><br>
-              Enter the deadline:<br>
-              <input type="date" name="deadline">
-              <br>
-              <input type="submit" value="submit">
-            </form>
+        <div class="over">
+            <div class="pop-up" id='new-task-input'>
+                <form>
+                  Enter the name of the task:<br>
+                  <input type="text" class="form-control" name="task-name"><br>
+                  Enter the deadline:<br>
+                  <input type="date" name="deadline" class="form-control">
+                  <br>
+                  <input type="submit" class="btn btn-primary" value="submit">
+                </form>
+            </div>
         </div>
-
+        <div class="over">
+            <div class="pop-up" id='new-team-input'>
+                <form>
+                  Enter the name of the team:<br>
+                  <input type="text" class="form-control" name="team-name"><br>
+                  Enter a user to start with:<br>
+                  <input type="text" name="team-member" class="form-control">
+                  <br>
+                  <input type="submit" class="btn btn-primary" value="submit">
+                </form>
+            </div>
+        </div>
         <div id='task-section'>
             
         </div>
